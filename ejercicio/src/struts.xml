@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts  
+Configuration 2.5//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+<constant name="struts.devMode" value="true" />
+
+  <package name="user" extends="struts-default">
+  <action name="inicio" >
+  <result>paginas/registro.jsp</result>
+  
+  </action>
+  
+  <action name="Registrar"  class="action.registrar">
+  <result name="Success">/index.jsp</result>
+  <result name="error">/index.jsp</result>
+  
+  </action>
+  <action name="listar" >
+  <result>paginas/listar.jsp</result>
+  
+  </action>
+  <action name="editar">
+<result>paginas/editar.jsp</result>  
+  </action>
+  
+  <action name="saludo" class="action.inicio" method="hola">
+          <result name="exito">/index.jsp</result>
+  </action>
+  
+  
+  
+
+  </package>
+
+</struts>
+
